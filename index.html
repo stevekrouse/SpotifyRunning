@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Spotify Running 2.0</title>
+    <style>
+    				body {
+    								color: white;
+    								background-color: black;
+    								padding-left: 20px
+    				}
+    				button { margin: 5px;}
+    				
+    				#thanks{
+         display: none;
+       }
+    </style>
+</head>
+<body>
+    <h1>Spotify Running 2.0</h1>
+    <p>👋 Hi there! Do you miss Spotify Running? Me too!</p>
+    
+    <p>My name is Steve and I'm an independent programmer. I rebuilt Spotify Running and am excited to share it with you!</p>
+    
+    <input id="email" placeholder="name@email.com"></input><button id="submit">Get Beta Access</button>
+    
+    <p id="thanks"">🙌 Thank you! I'll be in touch shortly!</p>
+</body>
+<script>
+    				submit.onclick = () => {  								
+    							 var data =	{email: email.value}
+    								var url = "https://hooks.clay.run/wcd857762e43d5e8"
+    								var xhr = new XMLHttpRequest();
+												xhr.open("POST", url, true);
+								 xhr.setRequestHeader('Content-Type', 'application/json');
+												xhr.send(JSON.stringify(data	));
+    								
+    								submit.remove()
+    								email.remove()
+    								thanks.style.display = "block"
+    				}
+</script>
+</html>
